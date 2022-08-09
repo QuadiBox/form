@@ -238,8 +238,8 @@ footer p{
 }
 
 dialog{
-    height: 30vw;
-    width: 40vw;
+    height: 20vw;
+    width: 30vw;
     display: none;
     flex-direction: column;
     gap: -30px;
@@ -251,7 +251,7 @@ dialog{
     border: 2px dashed var(--accent-clr);
     z-index: 200;
     margin-inline: auto;
-    margin-top: 20%;
+    margin-top: 18%;
 }
 
 dialog::backdrop{
@@ -329,6 +329,7 @@ span:nth-child(3) {
 
     form{
         width: 370px;
+        gap: 50px;
     }
 
     .space--cntn{
@@ -354,6 +355,7 @@ span:nth-child(3) {
 
     form{
         width: 280px;
+        gap: 50px;
     }
 
     .detail--section{
