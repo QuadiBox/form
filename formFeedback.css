@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --base-clr: #3e044b;
+    --primary-clr: #9b89b373;
+    --secondary-clr: #fadaaa;
+    --tertiary-clr: #ffffff;
+    --accent-clr: #d4ff00;
+}
+
+body{
+    background: var(--base-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+    gap: 40px;
+}
+
+h1{
+    font-size: 2.7em;
+    color: var(--secondary-clr);
+    font-weight: 700;
+    text-shadow: 1px 1.5px 3px var(--accent-clr);
+    /* font-family: 'Saira', sans-serif; */
+}
+
+.detail--section{
+    width: 350px;
+    padding: 10px;
+    border-radius: 0.3em;
+    background: var(--primary-clr);
+    backdrop-filter: blur(10px);
+    color: var(--tertiary-clr);
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+}
+
+form{
+    width: 470px;
+    padding-inline: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: flex-end;
+    position: relative;
+    z-index: 100;
+}
+
+.address{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 0.4em; 
+}
+
+label{
+    font-size: 0.94em;
+    color: white;
+    font-weight: 400;
+}
+
+label b{
+    color: var(--accent-clr);
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.n-inpt{
+    width: 100%;
+    height: 3.13em;
+    border-radius: 0.4em;
+    background: var(--primary-clr);
+    backdrop-filter: blur(10px);
+    color: yellow;
+    font-size: 0.93em;
+    font-weight: 400;
+    padding-inline: 18px;
+    border: none;
+    outline: none;
+}
+
+input:focus, textarea:focus{
+    border: 2px dashed var(--accent-clr);
+}
+
+.inpt--cntn{
+    width: 100%;
+    height: 3.13em;
+    border-radius: 0.4em;
+    position: relative;
+}
+
+.inpt--cntn i{
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: var(--tertiary-clr);
+    z-index: 3;
+}
+
+.a-inpt{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4em;
+    background: var(--primary-clr);
+    backdrop-filter: blur(10px);
+    color: yellow;
+    font-size: 0.93em;
+    font-weight: 400;
+    padding-left: 42px;
+    padding-right: 18px;
+    border: none;
+    outline: none; 
+}
+
+::placeholder{
+    color: var(--secondary-clr);
+    font-weight: 300;
+    font-size: 0.84em;
+}
+
+textarea{
+    width: 100%;
+    resize: vertical;
+    background: var(--primary-clr);
+    backdrop-filter: blur(10px);
+    color: var(--tertiary-clr);
+    font-size: 0.93em;
+    font-weight: 400;
+    padding-inline: 32px;
+    padding-block: 10px; 
+    border: none;
+    outline: none;
+}
+
+button{
+    padding: 0.8em 1.6em;
+    border-radius: 0.6em;
+    background: var(--accent-clr);
+    color: black;
+    font-size: 0.88em;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    transition: transform 200ms ease-in-out;
+}
+
+button:focus, button:hover{
+    transform: scale(0.96);
+}
+
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 30px;
+}
+
+footer p{
+    font-size: 0.6em;
+    font-weight: 300;
+    color: var(--accent-clr);
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.1em;
+    height: 2.1em;
+    border-radius: 50%;
+    border: 1px solid var(--secondary-clr);
+    color: white;
+    font-size: 1.2em;
+}
+
+.socials a:hover{
+    color: #d4ff00;
+}
+
+.astro--cntn{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 400px;
+}
+
+.spacecraft2{
+    transform: scale(0.2);
+    position: fixed;
+    right: -40%;
+    bottom: -82%;
+}
+
+.space--cntn{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 450px;
+    height: 450px;
+    transform: scale(1);
+}
+
+
+.astro, .spacecraft{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 522px) {
+    body{
+        padding-top: 10%;
+        font-size: 16px;
+    }
+
+
+    h1{
+        font-size: 2.3em;
+    }
+
+
+    form{
+        width: 370px;
+    }
+
+    .space--cntn{
+        top: -50px;
+        right: -70px;
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body{
+        padding-top: 12%;
+        font-size: 14px;
+    }
+
+
+    h1{
+        font-size: 7vw;
+    }
+
+
+    form{
+        width: 280px;
+    }
+
+    .detail--section{
+        width: 275px;
+    }
+    
+    label{
+        color: #fadaaa;
+        font-weight: 600;
+    }
+
+    .space--cntn{
+        top: -50px;
+        right: -70px;
+        transform: scale(0.7);
+    }
+}
