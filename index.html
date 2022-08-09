@@ -73,7 +73,7 @@
             <textarea name="FeedBack" name="Feedback" id="feedback" rows="5"></textarea>
         </div>
 
-        <button type="submit">Send</button>
+        <button id="btn" type="submit">Send</button>
 
         <footer>
             <p>Made With  <i class="icofont-heart"></i>  By QuadBox</p>
@@ -96,6 +96,28 @@
     </div>
 
     <img class="spacecraft2" src="waving-astro.svg" alt="">
+
+    <dialog>
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <p>Kindly wait while your feedback is being processed for sending <br> <br> <br> <i class="icofont-slightly-smile"></i></p>
+    </dialog>
+
+
+    <script>
+        const dialog = document.querySelector('dialog')
+        const btn = document.querySelector('#btn')
+
+        btn.addEventListener('click', _ => {
+            dialog.showModal();
+            dialog.style.display = 'flex'
+        })
+
+
+    </script>
    
 </body>
 </html>
